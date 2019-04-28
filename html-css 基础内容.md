@@ -33,6 +33,8 @@
 ## form表单 ##
 + form 表单 <input type="text">
 + 密码框 <input type="password">
+  - 例:<input type="text" class="user" placeholder="&nbsp&nbsp&nbsp请输入邮箱">
+  - <input type="password" class="pas" placeholder="&nbsp&nbsp&nbsp密码">
 
 ## 盒子模型 ##
 + 对盒子设置的宽高作用在content(内容区域),盒子的边框内外边距都会改变盒子的大小.
@@ -40,7 +42,7 @@
   - 解决办法:1. 外边盒子设置 overflow:hidden;
              2. 给父类盒子加一个极小的padding;
 
-## 显示和隐藏##
+## 显示和隐藏 ##
 + 隐藏后不占据位置,依然可以在位置上设置其他元素: display:none;
 + 隐藏后占据位置,其他元素按文档流继续设置: visibility: hidden;
 
@@ -55,6 +57,18 @@
 			clear: both; 
 		}
 
+## 导航栏设置
++ 定位ul标签,然后列表li浮动,一般向左浮动向右浮动会改变列表顺序.li互相通过margin控制距离,下划线和竖线通过设置 border 或 定位解决.
 
+## 插入图片随浏览器变换大小
++ 设置图片所在位置的宽为和图片宽度都为100%,不设置高度.
++ 设置元素相对浏览器的位置: 定位 position:50% 元素 margin:-50%;
 
+## 行内元素换行
++ 设成块元素 display:block
++ 严格设置盒子宽度,和行内元素宽度相同,行内元素放不下即换行
+
+## 块元素水平排列
++ 浮动和定位
++ 设成行内块(一般不使用,容易出问题)
 

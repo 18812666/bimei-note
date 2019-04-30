@@ -28,6 +28,7 @@
 ## css颜色 ##
 + rgb:   rgb(0,0,255) ==> 绿色 ；rgb(0,0,0) ==> 黑色 rgb和十六进制是可以互换的。
 + rgba:  rgba(0,0,255,0.5) ==> 跟rgb一样，a是透明度：0~1； 0.5==> .5
+  background-color:rgba(0,0,255,0.5);
 + 单独设透明度 opacity:0~1 
 
 ## form表单 ##
@@ -59,6 +60,7 @@
 
 ## 导航栏设置
 + 定位ul标签,然后列表li浮动,一般向左浮动向右浮动会改变列表顺序.li互相通过margin控制距离,下划线和竖线通过设置 border 或 定位解决.
++ 定位ul标签,然后列表li浮动,设置a标签宽高和margin距离,li默认被a标签撑起宽高
 
 ## 插入图片随浏览器变换大小
 + 设置图片所在位置的宽为和图片宽度都为100%,不设置高度.
@@ -79,5 +81,32 @@
 ## 图标和文子同行显示
 + 插入背景图片写文子用 text-index 空出位置;
 
-## 
+## 圆角
++ border-radius:50%;  四边都圆角
++ border-top-right-radius:30%;  上边和右边相交圆角
+
+## 分液器设置
++ 设置border边框,限定a标签的颜色渲染
+  - border: 2px solid transparent;
+	background-clip: padding-box/content-box;
+
+## 盒子套蒙层设置/透明度
++ 设置父类盒子背景图片后,子类盒子与父类盒子大小位置相同,设置子类盒子背景颜色的透明度:
+  - background-color: rgba(0,0,0, .5);
++ 设置某个元素的透明度例:div a span
+  - div{
+       opacity: 0.5;
+  }
+
+## z-index属性指定一个元素的堆叠顺序
++ 配合定位使用,拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+
+## transform旋转某一元素
++ 书写语法:transform:rotate(7deg);
+
+## 渐变(Gradients)
++ 线性渐变:linear-gradient 径向渐变:radial-gradient
+  - 由上到下:background: linear-gradient(#f6f6f6, #fff);
+  - 从左到右:background: linear-gradient(to right,#f6f6f6, #fff);
+  - 从左上角到右下角的线性渐变：linear-gradient(to bottom right, red , blue);
 
